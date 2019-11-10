@@ -25,7 +25,7 @@ class Calculator(App):
 
     def add_number(self, instance):
         if (self.formula == "0"):
-            self.formula = "0"
+            self.formula = ""
         sz = len(self.formula)
         if instance.text=="." and (self.formula[sz-1]=="." or self.formula[sz-1] == "" or self.formula[sz-1] == "+" or self.formula[sz-1] == "-" or self.formula[sz-1] == "*" or self.formula[sz-1] == "/"):
             self.formula +=""
@@ -64,7 +64,7 @@ class Calculator(App):
         gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),text = "9", on_press = self.add_number) )
         gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),text = "*", on_press = self.add_operator) )
 
-        gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),on_press = self.add_number) )
+        gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),text = "4",on_press = self.add_number) )
         gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),text = "5", on_press = self.add_number) )
         gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),text = "6", on_press = self.add_number) )
         gl.add_widget( Button(color=(0, 0, 0, 1), background_color=(.9, .9, .9, .3),text = "/", on_press = self.add_operator))
